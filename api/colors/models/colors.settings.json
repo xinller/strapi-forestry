@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "name": "colors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "project_bg_color": {
+      "type": "string"
+    },
+    "project_fg_color": {
+      "type": "string"
+    }
+  }
+}

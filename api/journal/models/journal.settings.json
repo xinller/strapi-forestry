@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journals",
+  "info": {
+    "name": "Journal",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "date"
+    },
+    "thumb": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "journals",
+      "dominant": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "projects": {
+      "via": "categories",
+      "collection": "project",
+      "dominant": true
+    },
+    "journals": {
+      "via": "categories",
+      "collection": "journal"
+    }
+  }
+}
